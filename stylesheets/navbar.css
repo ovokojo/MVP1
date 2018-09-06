@@ -1,13 +1,13 @@
 /* Main navbar */
 .navbar-mvp {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  background-color:rgba(0,0,0,.055);
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
 }
 
 /* Logo */
@@ -30,10 +30,115 @@
 
 /* Navbar link */
 .navbar-mvp-link {
-  color: #616668;
-  font-size: 14px;
+  color: #fff;
+  font-size: 18px;
 }
 .navbar-mvp-link:hover {
-  color: #da552f;
+  color: #686868;
   text-decoration: none;
+}
+
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: 100%; 
+  height: 100%;
+  z-index: -100;
+}
+
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+}
+
+
+
+#firstContent {
+  position:absolute;
+  height: 100%;
+  min-height: 100%;
+  max-height:100%;
+  top:100%;
+    z-index:-10000;
+}
+
+body {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Cinzel', serif;
+}
+
+
+
+
+
+
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  transform: translate(-50%, -50%);
+}
+
+
+#hero-vid {
+backface-visibility:hidden;
+background-size:cover;
+bottom:0;
+min-height:100%;
+min-width:100%;
+perspective:1000;
+position:fixed;
+right:0;
+width:auto;
+z-index:-1;
+}
+
+#hero-pic {
+display:block;
+height:auto;
+width:100%;
+}
+
+#state {
+bottom:0;
+cursor:pointer;
+font-size:2.25rem;
+left:0;
+line-height:1;
+padding:2rem 2.5rem 1.65rem;
+position:absolute;
+}
+
+
+#videoDiv {width: 100%; min-height: 100%; height: 100vh; width: auto; position: relative; z-index:-1; padding:0!important; margin: 0!important;}
+#videoBlock {width: 100%; height: 100%;  display: flex;  justify-content: center; align-items: center;}
+#videoMessage {width: 100%; height:100%; position: absolute; top: 0; left: 0;}
+#videoMessage h1{font-size: 36px;color:#ffffff;text-align:center;}
+#videoMessage h2{font-size: 1.5em;color:#ffffff;text-align:center;}
+#videoMessage h3{font-size: 1.2em;color:#ffffff;text-align:center;}
+.videoClick {text-align:center}
+.videoClick a{color:white;background-color:rgba(241, 241, 241, 0.25);font-size: 1.7em;cursor:pointer;cursor:hand}
+
+
+
+
 }
